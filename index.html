@@ -114,13 +114,19 @@
     font-family: 'Cinzel Decorative', serif; font-size: clamp(3rem, 10vw, 7rem);
     font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 1.5rem;
     text-shadow: 0 0 60px rgba(201,168,76,0.4), 0 4px 8px rgba(0,0,0,0.5);
-    opacity: 0; animation: fadeInUp 1s 0.7s forwards;
+    opacity: 0; animation: fadeInUp 1s 0.9s forwards;
+  }
+
+  .hero-da {
+    font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 300; font-style: italic; color: var(--gold-light); letter-spacing: 0.3em;
+    margin: -0.3rem 0 -0.5rem; opacity: 0; animation: fadeInUp 1s 0.7s forwards;
   }
 
   .hero-divider {
     width: 200px; height: 2px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 0 auto 1.5rem; position: relative; opacity: 0; animation: fadeInUp 1s 0.9s forwards;
+    margin: 0 auto 1.5rem; position: relative; opacity: 0; animation: fadeInUp 1s 1.1s forwards;
   }
 
   .hero-divider::before {
@@ -131,7 +137,7 @@
 
   .hero-date {
     font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 0.2em;
-    color: var(--cream); opacity: 0; animation: fadeInUp 1s 1.1s forwards;
+    color: var(--cream); opacity: 0; animation: fadeInUp 1s 1.3s forwards;
   }
 
   .scroll-hint {
@@ -465,7 +471,8 @@
   </div>
 
   <p class="hero-subtitle">Convite Especial</p>
-  <h1 class="hero-title">XV Anos</h1>
+  <h1 class="hero-title">XV</h1>
+  <p class="hero-da">da</p>
   <p class="hero-name">Anny</p>
   <div class="hero-divider"></div>
   <p class="hero-date">23 de Maio de 2026 &nbsp;•&nbsp; 20h</p>
@@ -490,23 +497,6 @@
       <strong>15 damas</strong> que irão dançar ao lado da nossa debutante nesta noite mágica.
     </p>
     <div class="deco-line"><span></span><i>🌹</i><span></span></div>
-  </div>
-</section>
-
-<!-- ═══════════ CORTE ═══════════ -->
-<section class="court" id="corte">
-  <div class="section-inner">
-    <h2 class="section-title">A Corte</h2>
-    <p class="section-subtitle">As 15 Damas &amp; Cavalheiros</p>
-
-    <div class="confirmed-counter">
-      <div class="counter-num" id="counterNum">0</div>
-      <div class="counter-label">de 15 confirmadas</div>
-    </div>
-
-    <div class="court-grid" id="courtGrid">
-      <div class="loading-court" id="loadingCourt">Carregando a corte</div>
-    </div>
   </div>
 </section>
 
@@ -586,6 +576,23 @@
     <h2 class="section-title">Confirme sua Presença</h2>
     <p class="section-subtitle">Contamos com você</p>
     <button class="rsvp-btn" id="rsvpBtn">Confirmar Presença</button>
+  </div>
+</section>
+
+<!-- ═══════════ CORTE ═══════════ -->
+<section class="court" id="corte">
+  <div class="section-inner">
+    <h2 class="section-title">A Corte</h2>
+    <p class="section-subtitle">As 15 Damas &amp; Cavalheiros</p>
+
+    <div class="confirmed-counter">
+      <div class="counter-num" id="counterNum">0</div>
+      <div class="counter-label">de 15 confirmadas</div>
+    </div>
+
+    <div class="court-grid" id="courtGrid">
+      <div class="loading-court" id="loadingCourt">Carregando a corte</div>
+    </div>
   </div>
 </section>
 
