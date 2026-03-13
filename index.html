@@ -541,6 +541,36 @@
   </div>
 </section>
 
+<!-- ═══════════ DRESSCODE ═══════════ -->
+<section class="dresscode">
+  <div class="section-inner">
+    <h2 class="section-title">Dresscode</h2>
+    <p class="section-subtitle">Em construção</p>
+    <div class="dresscode-grid">
+      <div class="dresscode-card">
+        <p class="dresscode-label">👑 Príncipes</p>
+        <p class="dresscode-desc">Em construção</p>
+      </div>
+      <div class="dresscode-card">
+        <p class="dresscode-label">💐 Damas</p>
+        <p class="dresscode-desc">Em construção</p>
+      </div>
+      <div class="dresscode-card">
+        <p class="dresscode-label">🎩 Cavalheiros</p>
+        <p class="dresscode-desc">Em construção</p>
+      </div>
+      <div class="dresscode-card">
+        <p class="dresscode-label">🌸 Daminhas Kids</p>
+        <p class="dresscode-desc">Em construção</p>
+      </div>
+      <div class="dresscode-card">
+        <p class="dresscode-label">🎪 Cavalheiros Kids</p>
+        <p class="dresscode-desc">Em construção</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ RSVP ═══════════ -->
 <section class="rsvp">
   <div class="section-inner">
@@ -554,11 +584,10 @@
 <section class="court" id="corte">
   <div class="section-inner">
     <h2 class="section-title">A Corte</h2>
-    <p class="section-subtitle">As 15 Damas &amp; Cavalheiros</p>
 
     <div class="confirmed-counter">
       <div class="counter-num" id="counterNum">0</div>
-      <div class="counter-label">de 15 confirmadas</div>
+      <div class="counter-label">de 23 confirmadas</div>
     </div>
 
     <div class="court-grid" id="courtGrid">
@@ -737,7 +766,6 @@
         <div class="card-number">${String(person.position).padStart(2, '0')}</div>
         <p class="card-role">${categoriaLabel}</p>
         <p class="card-name">${displayName}</p>
-        <p class="card-pair">Dress Code: ${person.dress_code}</p>
         <div class="card-icon">${person.confirmed ? '🌹' : person.icone}</div>
       `;
       grid.appendChild(card);
