@@ -489,43 +489,14 @@
     <div class="deco-line"><span></span><i>✦</i><span></span></div>
     <p class="intro-text">
       Momentos especiais merecem ser divididos com <strong>pessoas especiais</strong>.
-      Você foi escolhida para fazer parte de um momento único e inesquecível
+      Você foi escolhido(a) para fazer parte de um momento único e inesquecível
       — a <strong>valsa dos XV anos da Anny</strong>.
     </p>
     <p class="intro-text">
-      É com muito carinho que te convidamos para ser uma das
-      <strong>15 damas</strong> que irão dançar ao lado da nossa debutante nesta noite mágica.
+      É com muito carinho que te convidamos para ser parte da
+      <strong>corte</strong> que irá brilhar ao lado da nossa debutante nesta noite mágica.
     </p>
     <div class="deco-line"><span></span><i>🌹</i><span></span></div>
-  </div>
-</section>
-
-<!-- ═══════════ DRESSCODE ═══════════ -->
-<section class="dresscode">
-  <div class="section-inner">
-    <h2 class="section-title">Dresscode</h2>
-    <p class="section-subtitle">Sport Fino</p>
-    <div class="dresscode-grid">
-      <div class="dresscode-card">
-        <p class="dresscode-label">Cavalheiros</p>
-        <p class="dresscode-desc">All Black</p>
-        <div class="color-swatches">
-          <div class="swatch" style="background:#111"></div>
-          <div class="swatch" style="background:#1a1a1a"></div>
-          <div class="swatch" style="background:#222"></div>
-        </div>
-      </div>
-      <div class="dresscode-card">
-        <p class="dresscode-label">Damas</p>
-        <p class="dresscode-desc">Tons de Azul</p>
-        <div class="color-swatches">
-          <div class="swatch" style="background:#1a2744"></div>
-          <div class="swatch" style="background:#2a4a7f"></div>
-          <div class="swatch" style="background:#4a7abf"></div>
-          <div class="swatch" style="background:#7ba4d4"></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -691,14 +662,36 @@
   const courtRef = db.ref('corte');
 
   // ── Default Court Data ──
-  const defaultCourt = Array.from({ length: 15 }, (_, i) => ({
-    position: i + 1,
-    dama: `Dama ${i + 1}`,
-    cavalheiro: `Cavalheiro ${i + 1}`,
-    confirmed: false,
-    nome: '',
-    sobrenome: ''
-  }));
+  const defaultCourt = [
+    // Príncipes
+    { position: 1, categoria: 'principe', nome_exibicao: 'Príncipe 1', icone: '👑', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 2, categoria: 'principe', nome_exibicao: 'Príncipe 2', icone: '👑', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    // Damas
+    { position: 3, categoria: 'dama', nome_exibicao: 'Dama 1', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 4, categoria: 'dama', nome_exibicao: 'Dama 2', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 5, categoria: 'dama', nome_exibicao: 'Dama 3', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 6, categoria: 'dama', nome_exibicao: 'Dama 4', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 7, categoria: 'dama', nome_exibicao: 'Dama 5', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 8, categoria: 'dama', nome_exibicao: 'Dama 6', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 9, categoria: 'dama', nome_exibicao: 'Dama 7', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 10, categoria: 'dama', nome_exibicao: 'Dama 8', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 11, categoria: 'dama', nome_exibicao: 'Dama 9', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    // Cavalheiros
+    { position: 12, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 1', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 13, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 2', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 14, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 3', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 15, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 4', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 16, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 5', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    // Daminhas Kids
+    { position: 17, categoria: 'daminha', nome_exibicao: 'Daminha 1', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 18, categoria: 'daminha', nome_exibicao: 'Daminha 2', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 19, categoria: 'daminha', nome_exibicao: 'Daminha 3', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 20, categoria: 'daminha', nome_exibicao: 'Daminha 4', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 21, categoria: 'daminha', nome_exibicao: 'Daminha 5', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    // Cavalheiros Kids
+    { position: 22, categoria: 'cavalheiroKid', nome_exibicao: 'Cavalheiro 1', icone: '🎪', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
+    { position: 23, categoria: 'cavalheiroKid', nome_exibicao: 'Cavalheiro 2', icone: '🎪', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' }
+  ];
 
   // ── DOM refs ──
   const grid = document.getElementById('courtGrid');
@@ -721,23 +714,31 @@
 
     let confirmedCount = 0;
 
-    data.forEach((pair, i) => {
-      if (pair.confirmed) confirmedCount++;
+    data.forEach((person, i) => {
+      if (person.confirmed) confirmedCount++;
 
       const card = document.createElement('div');
-      card.className = 'court-card' + (pair.confirmed ? ' confirmed' : '');
-      card.id = `card-${pair.position}`;
+      card.className = 'court-card' + (person.confirmed ? ' confirmed' : '');
+      card.id = `card-${person.position}`;
 
-      const displayName = pair.confirmed
-        ? `${pair.nome} ${pair.sobrenome}`
-        : pair.dama;
+      const displayName = person.confirmed
+        ? `${person.nome} ${person.sobrenome}`
+        : person.nome_exibicao;
+
+      const categoriaLabel = {
+        'principe': 'Príncipe',
+        'dama': 'Dama',
+        'cavalheiro': 'Cavalheiro',
+        'daminha': 'Daminha Kids',
+        'cavalheiroKid': 'Cavalheiro Kids'
+      }[person.categoria] || person.categoria;
 
       card.innerHTML = `
-        <div class="card-number">${String(pair.position).padStart(2, '0')}</div>
-        <p class="card-role">Dama</p>
+        <div class="card-number">${String(person.position).padStart(2, '0')}</div>
+        <p class="card-role">${categoriaLabel}</p>
         <p class="card-name">${displayName}</p>
-        <p class="card-pair">& ${pair.cavalheiro}</p>
-        <div class="card-icon">${pair.confirmed ? '🌹' : '💃🕺'}</div>
+        <p class="card-pair">Dress Code: ${person.dress_code}</p>
+        <div class="card-icon">${person.confirmed ? '🌹' : person.icone}</div>
       `;
       grid.appendChild(card);
     });
@@ -764,11 +765,19 @@
     const currentVal = selectPos.value;
     selectPos.innerHTML = '<option value="">Selecione sua posição...</option>';
 
-    data.forEach(pair => {
-      if (!pair.confirmed) {
+    data.forEach(person => {
+      if (!person.confirmed) {
+        const categoriaLabel = {
+          'principe': 'Príncipe',
+          'dama': 'Dama',
+          'cavalheiro': 'Cavalheiro',
+          'daminha': 'Daminha Kids',
+          'cavalheiroKid': 'Cavalheiro Kids'
+        }[person.categoria] || person.categoria;
+
         const opt = document.createElement('option');
-        opt.value = pair.position;
-        opt.textContent = `Posição ${pair.position} — ${pair.dama} / ${pair.cavalheiro}`;
+        opt.value = person.position;
+        opt.textContent = `Posição ${person.position} — ${categoriaLabel} — ${person.nome_exibicao}`;
         selectPos.appendChild(opt);
       }
     });
@@ -784,7 +793,20 @@
     const val = snapshot.val();
     if (val) {
       // Convert object to array (Firebase stores as object with keys)
-      courtData = Object.values(val);
+      const loadedData = Object.values(val);
+      
+      // Check if data needs migration (old format without dress_code)
+      const needsMigration = loadedData.some(item => !item.dress_code);
+      
+      if (needsMigration) {
+        // Migrate to new format
+        const migratedData = {};
+        defaultCourt.forEach(d => { migratedData[d.position] = d; });
+        courtRef.set(migratedData);
+        courtData = [...defaultCourt];
+      } else {
+        courtData = loadedData;
+      }
     } else {
       // First time: seed database with defaults
       const seedData = {};
