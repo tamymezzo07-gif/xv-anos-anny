@@ -255,6 +255,68 @@
     margin-top: 0.3rem; opacity: 0.7;
   }
 
+  /* ── Gifts ── */
+  .gifts { background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03), transparent); }
+  
+  .gifts-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 1.5rem; 
+    max-width: 900px; 
+    margin: 2rem auto; 
+  }
+  
+  .gift-item {
+    background: rgba(201,168,76,0.04); 
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 2rem 1.5rem; 
+    text-align: center; 
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gift-item::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: scaleX(0); 
+    transition: transform 0.6s;
+  }
+  
+  .gift-item:hover::before { transform: scaleX(1); }
+  
+  .gift-item:hover { 
+    border-color: rgba(201,168,76,0.35); 
+    background: rgba(201,168,76,0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  
+  .gift-icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+    opacity: 0.8;
+    transition: transform 0.3s;
+  }
+  
+  .gift-item:hover .gift-icon {
+    transform: scale(1.1);
+  }
+  
+  .gift-name { 
+    font-family: 'Cinzel', serif; 
+    font-size: 0.9rem; 
+    letter-spacing: 0.15em; 
+    text-transform: uppercase; 
+    color: var(--gold); 
+    line-height: 1.4;
+  }
+
   /* ── Dresscode ── */
   .dresscode { background: linear-gradient(180deg, transparent, rgba(26,39,68,0.3), transparent); }
 
@@ -537,6 +599,46 @@
         <br><br>
         Sua <strong>presença nos ensaios é fundamental</strong> para que a nossa valsa seja perfeita. ✨
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SUGESTÕES DE PRESENTE ═══════════ -->
+<section class="gifts">
+  <div class="section-inner">
+    <h2 class="section-title">Sugestões de Presente</h2>
+    <p class="section-subtitle">Se desejar presentear</p>
+    <div class="deco-line"><span></span><i>✦</i><span></span></div>
+    
+    <div class="gifts-grid">
+      <div class="gift-item">
+        <div class="gift-icon">👜</div>
+        <p class="gift-name">Bolsa</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">👗</div>
+        <p class="gift-name">Pijama</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">🧴</div>
+        <p class="gift-name">Óleo, Creme ou Esfoliante</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">💍</div>
+        <p class="gift-name">Acessórios</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">💄</div>
+        <p class="gift-name">Maquiagem</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">✨</div>
+        <p class="gift-name">Perfume</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-icon">🌸</div>
+        <p class="gift-name">Skincare</p>
+      </div>
     </div>
   </div>
 </section>
