@@ -328,6 +328,75 @@
   /* ── Ensaio ── */
   .ensaio { background: linear-gradient(180deg, transparent, rgba(139,32,53,0.05), transparent); }
 
+  .ensaio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+
+  .ensaio-card {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(10,10,26,0.9));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .ensaio-card:hover {
+    border-color: rgba(201,168,76,0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  }
+
+  .ensaio-date {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ensaio-day {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .ensaio-time {
+    font-size: 1.1rem;
+    color: var(--cream);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ensaio-local {
+    font-size: 1rem;
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ensaio-address {
+    font-size: 0.9rem;
+    color: rgba(245,230,200,0.6);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    text-align: center;
+    font-style: italic;
+  }
+
   .ensaio-note {
     max-width: 600px; margin: 0 auto; text-align: center; padding: 2.5rem;
     border: 1px solid rgba(201,168,76,0.15); position: relative;
@@ -607,24 +676,59 @@
 <!-- ═══════════ ENSAIO ═══════════ -->
 <section class="ensaio">
   <div class="section-inner">
-    <h2 class="section-title">Ensaios</h2>
-    <p class="section-subtitle">Agenda da Valsa</p>
-    <div class="ensaio-note">
+    <h2 class="section-title">Agenda de Ensaios</h2>
+    <p class="section-subtitle">Preparação para a valsa</p>
+    
+    <div class="ensaio-grid">
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 25/04</div>
+        <div class="ensaio-day">Sábado</div>
+        <div class="ensaio-time">🕐 18:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 04</div>
+      </div>
+
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 26/04</div>
+        <div class="ensaio-day">Domingo</div>
+        <div class="ensaio-time">🕐 18:00 às 19:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 02</div>
+      </div>
+
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 02/05</div>
+        <div class="ensaio-day">Sábado</div>
+        <div class="ensaio-time">🕐 18:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 04</div>
+      </div>
+
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 03/05</div>
+        <div class="ensaio-day">Domingo</div>
+        <div class="ensaio-time">🕐 18:00 às 19:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 02</div>
+      </div>
+
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 09/05</div>
+        <div class="ensaio-day">Sábado</div>
+        <div class="ensaio-time">🕐 18:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 04</div>
+      </div>
+
+      <div class="ensaio-card">
+        <div class="ensaio-date">📅 17/05</div>
+        <div class="ensaio-day">Domingo</div>
+        <div class="ensaio-time">🕐 15:00 às 16:30</div>
+        <div class="ensaio-local">📍 Salão de Festa 02</div>
+      </div>
+    </div>
+
+    <div class="ensaio-address">
+      📍 Rua Armando Pinelli, 262 - Taboão - Diadema
+    </div>
+
+    <div class="ensaio-note" style="margin-top: 3rem;">
       <p>
-        <strong>📍 Local:</strong> Rua Armando Pinelli, 262 - Taboão - Diadema
-        <br><br>
-        <strong>📅 Datas e Horários:</strong><br><br>
-        
-        <strong>• 25/04 (Sábado)</strong> às 18:30 - Salão de Festa 04<br>
-        <strong>• 26/04 (Domingo)</strong> das 18h às 19:30 - Salão de Festa 02<br><br>
-        
-        <strong>• 02/05 (Sábado)</strong> às 18:30 - Salão de Festa 04<br>
-        <strong>• 03/05 (Domingo)</strong> das 18h às 19:30 - Salão de Festa 02<br><br>
-        
-        <strong>• 09/05 (Sábado)</strong> às 18:30 - Salão de Festa 04<br><br>
-        
-        <strong>• 17/05 (Domingo)</strong> das 15h às 16:30 - Salão de Festa 02
-        <br><br>
         Sua <strong>presença nos ensaios é fundamental</strong> para que a nossa valsa seja perfeita! ✨
       </p>
     </div>
