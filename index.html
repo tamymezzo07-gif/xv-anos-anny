@@ -289,6 +289,33 @@
   .color-swatches { display: flex; justify-content: center; gap: 8px; }
   .swatch { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); }
 
+  .dresscode-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    font-size: 0.95rem;
+    color: var(--cream);
+    line-height: 1.6;
+  }
+
+  .dresscode-info strong {
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  .dresscode-status {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background: rgba(201,168,76,0.08);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
   /* ── Info ── */
   .info { text-align: center; }
   .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 700px; margin: 2rem auto; }
@@ -628,6 +655,12 @@
           <div class="swatch" style="background:#1a1a1a"></div>
           <div class="swatch" style="background:#222"></div>
         </div>
+        <div class="dresscode-info">
+          <strong>📍 Onde alugar:</strong>
+          Clube do Traje - Aluguel de Ternos<br>
+          R. Luís Pinto Fláquer, 255 - Centro<br>
+          Santo André - SP, 09010-090
+        </div>
       </div>
       <div class="dresscode-card">
         <p class="dresscode-label">Damas</p>
@@ -638,6 +671,9 @@
           <div class="swatch" style="background:#2a4a7f"></div>
           <div class="swatch" style="background:#4a7abf"></div>
           <div class="swatch" style="background:#7ba4d4"></div>
+        </div>
+        <div class="dresscode-status">
+          ✨ Em confecção
         </div>
       </div>
     </div>
@@ -678,10 +714,6 @@
   <div class="section-inner">
     <h2 class="section-title">Agenda de Ensaios</h2>
     <p class="section-subtitle">Preparação para a valsa</p>
-
-        <div class="ensaio-address">
-      📍 Rua Armando Pinelli, 262 - Taboão - Diadema
-    </div>
     
     <div class="ensaio-grid">
       <div class="ensaio-card">
@@ -727,6 +759,9 @@
       </div>
     </div>
 
+    <div class="ensaio-address">
+      📍 Rua Armando Pinelli, 262 - Taboão - Diadema
+    </div>
 
     <div class="ensaio-note" style="margin-top: 3rem;">
       <p>
