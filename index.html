@@ -255,68 +255,6 @@
     margin-top: 0.3rem; opacity: 0.7;
   }
 
-  /* ── Gifts ── */
-  .gifts { background: linear-gradient(180deg, transparent, rgba(201,168,76,0.03), transparent); }
-  
-  .gifts-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-    gap: 1.5rem; 
-    max-width: 900px; 
-    margin: 2rem auto; 
-  }
-  
-  .gift-item {
-    background: rgba(201,168,76,0.04); 
-    border: 1px solid rgba(201,168,76,0.15);
-    padding: 2rem 1.5rem; 
-    text-align: center; 
-    transition: all 0.4s;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .gift-item::before {
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    transform: scaleX(0); 
-    transition: transform 0.6s;
-  }
-  
-  .gift-item:hover::before { transform: scaleX(1); }
-  
-  .gift-item:hover { 
-    border-color: rgba(201,168,76,0.35); 
-    background: rgba(201,168,76,0.08);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
-  
-  .gift-icon { 
-    font-size: 2.5rem; 
-    margin-bottom: 1rem; 
-    opacity: 0.8;
-    transition: transform 0.3s;
-  }
-  
-  .gift-item:hover .gift-icon {
-    transform: scale(1.1);
-  }
-  
-  .gift-name { 
-    font-family: 'Cinzel', serif; 
-    font-size: 0.9rem; 
-    letter-spacing: 0.15em; 
-    text-transform: uppercase; 
-    color: var(--gold); 
-    line-height: 1.4;
-  }
-
   /* ── Dresscode ── */
   .dresscode { background: linear-gradient(180deg, transparent, rgba(26,39,68,0.3), transparent); }
 
@@ -332,6 +270,22 @@
   .dresscode-label { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
   .dresscode-desc { font-size: 1.3rem; font-weight: 500; color: var(--cream); margin-bottom: 1rem; }
 
+  .dresscode-image {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(201,168,76,0.3);
+    margin-bottom: 1.5rem;
+    transition: all 0.4s;
+  }
+
+  .dresscode-card:hover .dresscode-image {
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
   .color-swatches { display: flex; justify-content: center; gap: 8px; }
   .swatch { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid rgba(201,168,76,0.4); }
 
@@ -342,6 +296,34 @@
   .info-icon { font-size: 1.8rem; margin-bottom: 0.75rem; opacity: 0.7; }
   .info-label { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
   .info-value { font-size: 1.2rem; color: var(--cream); line-height: 1.5; }
+
+  .map-buttons { 
+    display: flex; 
+    gap: 8px; 
+    justify-content: center; 
+    margin-top: 1rem; 
+    flex-wrap: wrap;
+  }
+
+  .map-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .map-btn:hover {
+    background: rgba(201,168,76,0.2);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
 
   /* ── Ensaio ── */
   .ensaio { background: linear-gradient(180deg, transparent, rgba(139,32,53,0.05), transparent); }
@@ -551,14 +533,45 @@
     <div class="deco-line"><span></span><i>✦</i><span></span></div>
     <p class="intro-text">
       Momentos especiais merecem ser divididos com <strong>pessoas especiais</strong>.
-      Você foi escolhido(a) para fazer parte de um momento único e inesquecível
+      Você foi escolhida para fazer parte de um momento único e inesquecível
       — a <strong>valsa dos XV anos da Anny</strong>.
     </p>
     <p class="intro-text">
-      É com muito carinho que te convidamos para ser parte da
-      <strong>corte</strong> que irá brilhar ao lado da nossa debutante nesta noite mágica.
+      É com muito carinho que te convidamos para ser uma das
+      <strong>15 damas</strong> que irão dançar ao lado da nossa debutante nesta noite mágica.
     </p>
     <div class="deco-line"><span></span><i>🌹</i><span></span></div>
+  </div>
+</section>
+
+<!-- ═══════════ DRESSCODE ═══════════ -->
+<section class="dresscode">
+  <div class="section-inner">
+    <h2 class="section-title">Dresscode</h2>
+    <p class="section-subtitle">Sport Fino</p>
+    <div class="dresscode-grid">
+      <div class="dresscode-card">
+        <p class="dresscode-label">Cavalheiros</p>
+        <img src="cavalheiros-dresscode.png" alt="Dresscode Cavalheiros" class="dresscode-image">
+        <p class="dresscode-desc">All Black</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#111"></div>
+          <div class="swatch" style="background:#1a1a1a"></div>
+          <div class="swatch" style="background:#222"></div>
+        </div>
+      </div>
+      <div class="dresscode-card">
+        <p class="dresscode-label">Damas</p>
+        <img src="damas-dresscode.png" alt="Dresscode Damas" class="dresscode-image">
+        <p class="dresscode-desc">Tons de Azul</p>
+        <div class="color-swatches">
+          <div class="swatch" style="background:#1a2744"></div>
+          <div class="swatch" style="background:#2a4a7f"></div>
+          <div class="swatch" style="background:#4a7abf"></div>
+          <div class="swatch" style="background:#7ba4d4"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -581,7 +594,11 @@
       <div class="info-item">
         <div class="info-icon">📍</div>
         <p class="info-label">Local</p>
-        <p class="info-value">Ilha di Capri<br>São Bernardo do Campo</p>
+        <p class="info-value">Ilha di Capri - Salão Napoles<br>Rodovia Anchieta, SP-150, km 28<br>Vila Balnearia, São Bernardo do Campo - SP</p>
+        <div class="map-buttons">
+          <a href="https://www.google.com/maps/dir//Ilha+de+Capri+Buffet+Eventos,+Rodovia+Anchieta,+SP-150,+km+28+-+Vila+Balnearia,+S%C3%A3o+Bernardo+do+Campo+-+SP,+09822-250/@-23.6597869,-46.6223104,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce41794f164f17:0x93eaef9188424c1b!2m2!1d-46.535788!2d-23.767335?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-btn">📍 Google Maps</a>
+          <a href="https://www.waze.com/live-map/directions?to=ll.-23.766882%2C-46.536305" target="_blank" class="map-btn">🚗 Waze</a>
+        </div>
       </div>
     </div>
   </div>
@@ -591,84 +608,25 @@
 <section class="ensaio">
   <div class="section-inner">
     <h2 class="section-title">Ensaios</h2>
-    <p class="section-subtitle">Preparação para a valsa</p>
+    <p class="section-subtitle">Agenda da Valsa</p>
     <div class="ensaio-note">
       <p>
-        Em breve divulgaremos as <strong>datas e horários dos ensaios</strong> da valsa.
-        Fique atenta às atualizações!
+        <strong>📍 Local:</strong> Rua Armando Pinelli, 262 - Taboão - Diadema
         <br><br>
-        Sua <strong>presença nos ensaios é fundamental</strong> para que a nossa valsa seja perfeita. ✨
+        <strong>📅 Datas e Horários:</strong><br><br>
+        
+        <strong>• 25/04 (Sábado)</strong> às 18:30 - Salão de Festa 04<br>
+        <strong>• 26/04 (Domingo)</strong> das 18h às 19:30 - Salão de Festa 02<br><br>
+        
+        <strong>• 02/05 (Sábado)</strong> às 18:30 - Salão de Festa 04<br>
+        <strong>• 03/05 (Domingo)</strong> das 18h às 19:30 - Salão de Festa 02<br><br>
+        
+        <strong>• 09/05 (Sábado)</strong> às 18:30 - Salão de Festa 04<br><br>
+        
+        <strong>• 17/05 (Domingo)</strong> das 15h às 16:30 - Salão de Festa 02
+        <br><br>
+        Sua <strong>presença nos ensaios é fundamental</strong> para que a nossa valsa seja perfeita! ✨
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ SUGESTÕES DE PRESENTE ═══════════ -->
-<section class="gifts">
-  <div class="section-inner">
-    <h2 class="section-title">Sugestões de Presente</h2>
-    <p class="section-subtitle">Se desejar presentear</p>
-    <div class="deco-line"><span></span><i>✦</i><span></span></div>
-    
-    <div class="gifts-grid">
-      <div class="gift-item">
-        <div class="gift-icon">👜</div>
-        <p class="gift-name">Bolsa</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">👗</div>
-        <p class="gift-name">Pijama</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">🧴</div>
-        <p class="gift-name">Óleo, Creme ou Esfoliante</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">💍</div>
-        <p class="gift-name">Acessórios</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">💄</div>
-        <p class="gift-name">Maquiagem</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">✨</div>
-        <p class="gift-name">Perfume</p>
-      </div>
-      <div class="gift-item">
-        <div class="gift-icon">🌸</div>
-        <p class="gift-name">Skincare</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ DRESSCODE ═══════════ -->
-<section class="dresscode">
-  <div class="section-inner">
-    <h2 class="section-title">Dresscode</h2>
-    <p class="section-subtitle">Em construção</p>
-    <div class="dresscode-grid">
-      <div class="dresscode-card">
-        <p class="dresscode-label">👑 Príncipes</p>
-        <p class="dresscode-desc">Em construção</p>
-      </div>
-      <div class="dresscode-card">
-        <p class="dresscode-label">💐 Damas</p>
-        <p class="dresscode-desc">Em construção</p>
-      </div>
-      <div class="dresscode-card">
-        <p class="dresscode-label">🎩 Cavalheiros</p>
-        <p class="dresscode-desc">Em construção</p>
-      </div>
-      <div class="dresscode-card">
-        <p class="dresscode-label">🌸 Daminhas Kids</p>
-        <p class="dresscode-desc">Em construção</p>
-      </div>
-      <div class="dresscode-card">
-        <p class="dresscode-label">🎪 Cavalheiros Kids</p>
-        <p class="dresscode-desc">Em construção</p>
-      </div>
     </div>
   </div>
 </section>
@@ -686,10 +644,11 @@
 <section class="court" id="corte">
   <div class="section-inner">
     <h2 class="section-title">A Corte</h2>
+    <p class="section-subtitle">As 15 Damas &amp; Cavalheiros</p>
 
     <div class="confirmed-counter">
       <div class="counter-num" id="counterNum">0</div>
-      <div class="counter-label">de 23 confirmadas</div>
+      <div class="counter-label">de 15 confirmadas</div>
     </div>
 
     <div class="court-grid" id="courtGrid">
@@ -793,36 +752,14 @@
   const courtRef = db.ref('corte');
 
   // ── Default Court Data ──
-  const defaultCourt = [
-    // Príncipes
-    { position: 1, categoria: 'principe', nome_exibicao: 'Príncipe 1', icone: '👑', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 2, categoria: 'principe', nome_exibicao: 'Príncipe 2', icone: '👑', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    // Damas
-    { position: 3, categoria: 'dama', nome_exibicao: 'Dama 1', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 4, categoria: 'dama', nome_exibicao: 'Dama 2', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 5, categoria: 'dama', nome_exibicao: 'Dama 3', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 6, categoria: 'dama', nome_exibicao: 'Dama 4', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 7, categoria: 'dama', nome_exibicao: 'Dama 5', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 8, categoria: 'dama', nome_exibicao: 'Dama 6', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 9, categoria: 'dama', nome_exibicao: 'Dama 7', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 10, categoria: 'dama', nome_exibicao: 'Dama 8', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 11, categoria: 'dama', nome_exibicao: 'Dama 9', icone: '💐', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    // Cavalheiros
-    { position: 12, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 1', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 13, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 2', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 14, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 3', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 15, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 4', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 16, categoria: 'cavalheiro', nome_exibicao: 'Cavalheiro 5', icone: '🎩', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    // Daminhas Kids
-    { position: 17, categoria: 'daminha', nome_exibicao: 'Daminha 1', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 18, categoria: 'daminha', nome_exibicao: 'Daminha 2', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 19, categoria: 'daminha', nome_exibicao: 'Daminha 3', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 20, categoria: 'daminha', nome_exibicao: 'Daminha 4', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 21, categoria: 'daminha', nome_exibicao: 'Daminha 5', icone: '🌸', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    // Cavalheiros Kids
-    { position: 22, categoria: 'cavalheiroKid', nome_exibicao: 'Cavalheiro 1', icone: '🎪', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' },
-    { position: 23, categoria: 'cavalheiroKid', nome_exibicao: 'Cavalheiro 2', icone: '🎪', dress_code: 'Em construção', foto: '', confirmed: false, nome: '', sobrenome: '' }
-  ];
+  const defaultCourt = Array.from({ length: 15 }, (_, i) => ({
+    position: i + 1,
+    dama: `Dama ${i + 1}`,
+    cavalheiro: `Cavalheiro ${i + 1}`,
+    confirmed: false,
+    nome: '',
+    sobrenome: ''
+  }));
 
   // ── DOM refs ──
   const grid = document.getElementById('courtGrid');
@@ -845,30 +782,23 @@
 
     let confirmedCount = 0;
 
-    data.forEach((person, i) => {
-      if (person.confirmed) confirmedCount++;
+    data.forEach((pair, i) => {
+      if (pair.confirmed) confirmedCount++;
 
       const card = document.createElement('div');
-      card.className = 'court-card' + (person.confirmed ? ' confirmed' : '');
-      card.id = `card-${person.position}`;
+      card.className = 'court-card' + (pair.confirmed ? ' confirmed' : '');
+      card.id = `card-${pair.position}`;
 
-      const displayName = person.confirmed
-        ? `${person.nome} ${person.sobrenome}`
-        : person.nome_exibicao;
-
-      const categoriaLabel = {
-        'principe': 'Príncipe',
-        'dama': 'Dama',
-        'cavalheiro': 'Cavalheiro',
-        'daminha': 'Daminha Kids',
-        'cavalheiroKid': 'Cavalheiro Kids'
-      }[person.categoria] || person.categoria;
+      const displayName = pair.confirmed
+        ? `${pair.nome} ${pair.sobrenome}`
+        : pair.dama;
 
       card.innerHTML = `
-        <div class="card-number">${String(person.position).padStart(2, '0')}</div>
-        <p class="card-role">${categoriaLabel}</p>
+        <div class="card-number">${String(pair.position).padStart(2, '0')}</div>
+        <p class="card-role">Dama</p>
         <p class="card-name">${displayName}</p>
-        <div class="card-icon">${person.confirmed ? '🌹' : person.icone}</div>
+        <p class="card-pair">& ${pair.cavalheiro}</p>
+        <div class="card-icon">${pair.confirmed ? '🌹' : '💃🕺'}</div>
       `;
       grid.appendChild(card);
     });
@@ -895,19 +825,11 @@
     const currentVal = selectPos.value;
     selectPos.innerHTML = '<option value="">Selecione sua posição...</option>';
 
-    data.forEach(person => {
-      if (!person.confirmed) {
-        const categoriaLabel = {
-          'principe': 'Príncipe',
-          'dama': 'Dama',
-          'cavalheiro': 'Cavalheiro',
-          'daminha': 'Daminha Kids',
-          'cavalheiroKid': 'Cavalheiro Kids'
-        }[person.categoria] || person.categoria;
-
+    data.forEach(pair => {
+      if (!pair.confirmed) {
         const opt = document.createElement('option');
-        opt.value = person.position;
-        opt.textContent = `Posição ${person.position} — ${categoriaLabel} — ${person.nome_exibicao}`;
+        opt.value = pair.position;
+        opt.textContent = `Posição ${pair.position} — ${pair.dama} / ${pair.cavalheiro}`;
         selectPos.appendChild(opt);
       }
     });
@@ -923,20 +845,7 @@
     const val = snapshot.val();
     if (val) {
       // Convert object to array (Firebase stores as object with keys)
-      const loadedData = Object.values(val);
-      
-      // Check if data needs migration (old format without dress_code)
-      const needsMigration = loadedData.some(item => !item.dress_code);
-      
-      if (needsMigration) {
-        // Migrate to new format
-        const migratedData = {};
-        defaultCourt.forEach(d => { migratedData[d.position] = d; });
-        courtRef.set(migratedData);
-        courtData = [...defaultCourt];
-      } else {
-        courtData = loadedData;
-      }
+      courtData = Object.values(val);
     } else {
       // First time: seed database with defaults
       const seedData = {};
